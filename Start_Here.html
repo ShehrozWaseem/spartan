@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spartan Sales Tax Lineage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F2F4F6;--surface:#FFFFFF;--surface2:#E9EDF1;--line:#D3DAE2;--ink:#182233;--muted:#5D6B7D;--accent:#0E6E8C;--accent-ink:#FFFFFF;--accent-soft:#D8EAF1;
+--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--r:6px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0F151D;--surface:#171F2A;--surface2:#1F2936;--line:#2E3947;--ink:#E5EBF3;--muted:#9AA7B8;--accent:#4FB4CF;--accent-ink:#0B1A21;--accent-soft:#163541}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0F151D;--surface:#171F2A;--surface2:#1F2936;--line:#2E3947;--ink:#E5EBF3;--muted:#9AA7B8;--accent:#4FB4CF;--accent-ink:#0B1A21;--accent-soft:#163541}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-block:0 48px;padding-inline:20px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-.02em}h2{font-size:22px;font-weight:600}h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+p{margin:0}.muted{color:var(--muted)}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
+header.top .brand{font-weight:600}
+.hero{padding-block:40px 28px;display:grid;gap:12px}
+.hero p{max-width:72ch;font-size:16px}
+.group{margin-top:28px;display:grid;gap:12px}
+.group > p{max-width:72ch}
+.cards{display:grid;gap:12px;margin-top:4px}
+a.card{display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;color:inherit;text-decoration:none;transition:border-color .12s,box-shadow .12s}
+a.card:hover{border-color:var(--accent);box-shadow:0 2px 10px rgba(14,110,140,.10)}
+.step{width:44px;height:44px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--mono);font-weight:500;font-size:16px}
+.body{display:grid;gap:8px;min-width:0}
+.body p{max-width:78ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:4px;font-size:12.5px;align-items:center}
+.chip{font-family:var(--mono);font-size:12px;background:var(--surface2);border:1px solid var(--line);border-radius:4px;padding:2px 7px;overflow-wrap:anywhere}
+.open{align-self:center;white-space:nowrap;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:14px;padding:9px 14px;border-radius:var(--r)}
+footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:78ch}
+@media (max-width:700px){a.card{grid-template-columns:36px 1fr;gap:12px;padding:16px}.step{width:36px;height:36px;font-size:14px}.open{grid-column:2;justify-self:start}}
+</style>
+
+<header class="top"><div class="wrap">
+  <span class="brand">Spartan Race · sales tax project</span>
+  <span class="muted">Start here</span>
+</div></header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">Spartan Race · sales tax project · five walkthrough pages</div>
+    <h1>Where every number comes from, one page per workbook</h1>
+    <p>Each workbook in this project has its own walkthrough page that shows what it contains, which source files it was built from, and how to trace any figure back to where it started. Pick the one you need below. Each page opens in a new tab, so this list stays open.</p>
+  </section>
+
+  <section class="group">
+    <h2>What was sold and what tax was collected</h2>
+    <p class="muted">Built from Spartan's own revenue files.</p>
+    <div class="cards">
+
+      <a class="card" href="Revenue_Tax_Lineage.html" target="_blank" rel="noopener">
+        <div class="step">1</div>
+        <div class="body">
+          <div class="eyebrow">Merchandise revenue and sales tax · built 28 Sep 2026</div>
+          <h3>Where every merchandise number comes from</h3>
+          <p>This page follows the merchandise money only: t-shirts, medals and gear sold at the races, plus the online store. It shows how the raw file becomes one row per event, how each race is placed in a state when the file never says which state it was in, what tax was collected, and how that compares to what the state's rate says should have been collected.</p>
+          <div class="meta"><span class="muted">Explains workbook</span><span class="chip">Merch_Working.xlsx</span><span class="muted">Page</span><span class="chip">Revenue_Tax_Lineage.html</span></div>
+        </div>
+        <span class="open">Open page ↗</span>
+      </a>
+
+      <a class="card" href="Tax_Deliverable_Lineage.html" target="_blank" rel="noopener">
+        <div class="step">2</div>
+        <div class="body">
+          <div class="eyebrow">All revenue, all three companies · built 28 Sep 2026</div>
+          <h3>Every number in the tax deliverable, and where it came from</h3>
+          <p>This is the file that answers "how much did we sell in each state, and how much sales tax did we actually collect on it". It merges four source files into one grain (state × year × company × revenue type) and then adds the researched tax rules on top. The page explains what each column means in plain words, which source column became which number, and has a state picker that shows the rows, the individual races, the merchandise and the open concerns for whichever state you pick.</p>
+          <div class="meta"><span class="muted">Explains workbook</span><span class="chip">Spartan_Tax_Deliverable_NEW.xlsx</span><span class="muted">Page</span><span class="chip">Tax_Deliverable_Lineage.html</span></div>
+        </div>
+        <span class="open">Open page ↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>What the states say was filed, paid and is still owed</h2>
+    <p class="muted">Built from the state tax portals.</p>
+    <div class="cards">
+
+      <a class="card" href="State_Portal_Lineage.html" target="_blank" rel="noopener">
+        <div class="step">3</div>
+        <div class="body">
+          <div class="eyebrow">State sales-tax portals · built 26 Sep 2026</div>
+          <h3>From 1,018 portal PDFs to one reviewable workbook</h3>
+          <p>The WestMark team logged into each state's tax portal and pulled the relevant information for that state: payment pages, balance pages and filed returns. A script read every PDF, recognised which kind of page it was, lifted the figures, and wrote each one as a row that points back to its page. Nothing was netted, merged or interpreted. This page shows the route from PDF to row, and lets you open any document and see both sides.</p>
+          <div class="meta"><span class="muted">Explains</span><span class="chip">1,018 portal PDFs → scrape workbook</span><span class="muted">Page</span><span class="chip">State_Portal_Lineage.html</span></div>
+        </div>
+        <span class="open">Open page ↗</span>
+      </a>
+
+      <a class="card" href="State_Tax_Exposure_Guide.html" target="_blank" rel="noopener">
+        <div class="step">4</div>
+        <div class="body">
+          <div class="eyebrow">Exposure with payments · built 28 Sep 2026</div>
+          <h3>What each state says is owed, next to what was actually paid</h3>
+          <p>This workbook puts two things side by side for every state: what the state's website showed as owed on 10 September 2026, and what the saved portal pages show was reported and paid. It exists so that anyone can ask "where did this number come from, and can I trust it?" and get an answer that ends at a page in a PDF. Nothing in it is typed by hand.</p>
+          <div class="meta"><span class="muted">Explains workbook</span><span class="chip">State_Tax_Exposure_with_Payments.xlsx</span><span class="muted">Page</span><span class="chip">State_Tax_Exposure_Guide.html</span></div>
+        </div>
+        <span class="open">Open page ↗</span>
+      </a>
+
+      <a class="card" href="Project_Status_Lineage.html" target="_blank" rel="noopener">
+        <div class="step">5</div>
+        <div class="body">
+          <div class="eyebrow">Project status · built 28 Sep 2026</div>
+          <h3>Filed, paid and collected, state by state, on one sheet</h3>
+          <p>The status workbook is the one-page answer for the project. For every state and year it shows what Spartan reported to the state, what the state received, what penalties were added, and what customers were actually charged. Four columns were filled in by script; every other column is the template's own sum. This page shows where each of those four comes from and how far you can trust it.</p>
+          <div class="meta"><span class="muted">Explains workbook</span><span class="chip">Sales Tax Project Status - filled v2.xlsx</span><span class="muted">Page</span><span class="chip">Project_Status_Lineage.html</span></div>
+        </div>
+        <span class="open">Open page ↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>Keep this file in the same folder as the five pages it links to. If a link does not open, the page has been moved or renamed.</footer>
+
+</div>
+</html>
